@@ -1,0 +1,64 @@
+
+html, body, code {font: 14px/1em 'Open Sans', Arial, Serif;}
+
+html, body {background: #FFF; color: #000;}
+body, ul, li, h4, h5, p, iframe {margin: 0; padding: 0; border: 0; list-style-type: none;}
+strong, em {font-weight: normal; font-style: normal;}
+
+#splash {position: absolute; left: 0; top: 0; right: 0; bottom: 0; display: none; background: #FFF; z-index: 3;}
+#splash span.by {position: absolute; left: 0; right: 0; bottom: 10vh; text-align: center; font-size: 20px; line-height: 1em; font-weight: 700;}
+
+#header {position: absolute; left: 0; top: 0; right: 0; display: table; width: 100%; height: 30px; background: #EFC20F;}
+#header h4 {display: table-cell; text-align: center; vertical-align: middle;}
+
+#body {position: fixed; left: 0; top: 30px; bottom: 60px; right: 0; z-index: 1;}
+
+span.icon {display: inline-block; vertical-align: middle; width: 16px; height: 16px; background-size: 16px 16px;}
+span.icon.exit {background-image: url('./icon-exit.svg');}
+span.icon.archive {background-image: url('./icon-archive.svg');}
+span.icon.file {background-image: url('./icon-file.svg');}
+span.icon.folder {background-image: url('./icon-folder.svg');}
+span.icon.star {background-image: url('./icon-star.svg');}
+
+.view {position: relative; width: 100%; height: 100%; background: #FFF;}
+
+.view.menu ul.items {position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: auto;}
+.view.menu ul.items li.item {width: 100%; padding: 9px 10px; box-sizing: border-box; overflow: hidden; background: #FFF; border-bottom: 1px solid #E3E3E3;}
+.view.menu ul.items li.item.selected {background: #E3E3E3;}
+
+.view.menu ul.items li.simple-item .simple {display: table; width: 100%;}
+.view.menu ul.items li.simple-item .simple .left {display: table-cell; vertical-align: middle; padding-right: 5px;}
+.view.menu ul.items li.simple-item .simple .right {display: table-cell; vertical-align: middle; width: 99%;}
+.view.menu ul.items li.simple-item .simple .right .title {display: block; line-height: 1.2em;}
+.view.menu ul.items li.simple-item .simple .right .subtitle {display: block; font-size: 12px; line-height: 1.2em; padding-top: 2px; color: #646464;}
+
+#loading {position: fixed; left: 50%; top: 50%; z-index: 10; display: none; margin: -7vh 0 0 -7vh; width: 14vh; height: 14vh;}
+#loading .bounce1, #loading .bounce2 {width: 100%; height: 100%; border-radius: 50%; opacity: 0.4; background: #222; position: absolute; top: 0; left: 0; -webkit-animation: sk-bounce 2.0s infinite ease-in-out; animation: sk-bounce 2.0s infinite ease-in-out;}
+#loading .bounce2 {-webkit-animation-delay: -1.0s; animation-delay: -1.0s;}
+@-webkit-keyframes sk-bounce {
+	0%, 100% {-webkit-transform: scale(0.0);}
+	50% {-webkit-transform: scale(1.0);}
+}
+@keyframes sk-bounce {
+	0%, 100% {transform: scale(0.0); -webkit-transform: scale(0.0);} 
+	50% {transform: scale(1.0); -webkit-transform: scale(1.0);}
+}
+
+#navbar {position: fixed; bottom: 0; left: 0; right: 0; z-index: 1; width: 100%; height: 60px; color: #000;}
+#navbar .path {display: table; width: 100%; height: 30px; overflow: hidden; white-space: nowrap;}
+#navbar .path.theme-transparent {background: transparent;}
+#navbar .path.theme-files {color: #FFF; background: #000;}
+#navbar .path.theme-archive {color: #FFF; background:#E05800;}
+#navbar .path .text {display: table-cell; vertical-align: middle; padding: 0 8px; font-size: 13px; line-height: 1.2em;}
+#navbar .tips {position: relative; height: 30px; background: #EFC20F;}
+#navbar .tips .tip {position: absolute; left: 0; top: 0; display: table; width: 100%; height: 30px; padding: 0 8px; box-sizing: border-box;}
+#navbar .tips .tip .text {display: table-cell; vertical-align: middle;}
+#navbar .tips .tip.left .text {text-align: left;}
+#navbar .tips .tip.center .text {text-align: center; font-weight: bold;}
+
+#prompt {position: fixed; left: 0; bottom: 0; right: 0; z-index: 2; display: none; padding: 10px; text-align: center; background: #C6C6C6;}
+#prompt h4 {padding: 0 0 8px; line-height: 1.2em;}
+#prompt input.input {padding: 5px; margin: 0 0 8px; box-sizing: border-box; width: 80%; background: #FFF; border: 1px solid #A5A5A5;}
+#prompt input.input:invalid {background: #FFD3D3; outline: none; border-color: #C94040; box-shadow: none;}
+#prompt ul.choices li.choice {display: inline-block; padding: 6px 8px; color: #FFF; background: #939393; font-weight: bold;}
+#prompt ul.choices li.choice.selected {color: #000; background: #EFC20F;}

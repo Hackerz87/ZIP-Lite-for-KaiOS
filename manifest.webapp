@@ -1,0 +1,59 @@
+{
+	"type": "privileged",
+	"name": "ZIP Lite",
+	"subtitle": "Extract ZIP archives easily.",
+	"description": "Super fast ZIP file decompressor. This app supports only decompression.",
+
+	"version": "1.0.1",
+	"launch_path": "/index.html",
+	"icons": {
+		"56": "/icons/icon56x56.png",
+		"112": "/icons/icon112x112.png"
+	},
+	"developer": {
+		"name": "n4no.com",
+		"url": "http://kaios.n4no.com"
+	},
+	"theme_color": "#E05800",
+	"fullscreen": "true",
+
+	"permissions": {
+		"mobiledata":{},
+		"browser": {
+			"description": "Required to open remote websites."
+		},
+		"device-storage:sdcard": {
+			"description": "Required for browsing files.",
+			"access": "readwrite"
+		}
+	},
+
+	"dependencies": {
+		"ads-sdk": "1.3.0"
+	},
+
+	"default_locale": "en-US",
+	"locales": {
+		"en-US": {
+			"name": "ZIP Lite",
+			"subtitle": "Extract ZIP archives easily.",
+			"description": "Super fast ZIP file decompressor. This app supports only decompression."
+		}
+	},
+
+	"activities": {
+		"open": {
+			"href": "/index.html",
+			"disposition": "window",
+			"filters": {
+				"type": [
+					"application/zip",
+					"application/octet-stream",
+					"application/x-zip-compressed",
+					"multipart/x-zip"
+				]
+			},
+			"returnValue": false
+		}
+	}
+}
